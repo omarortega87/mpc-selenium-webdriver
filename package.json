@@ -1,0 +1,23 @@
+{
+  "name": "mcp-selenium-webdriver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "MPC Selenium WebDriver",
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/selenium-webdriver": "^4.1.28",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "selenium-webdriver": "^4.31.0",
+    "zod": "^3.24.3"
+  }
+}

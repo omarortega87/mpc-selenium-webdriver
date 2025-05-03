@@ -21,7 +21,6 @@ const ensureString = (value: string | undefined): string => {
   return value;
 };
 
-// Define a function to ensure the key is valid
 const ensureValidKey = (key: string | ((...var_args: string[]) => string)): string => {
   if (typeof key === "function") {
     throw new Error("Expected a string but received a function");
@@ -35,12 +34,10 @@ const server = new McpServer({
   version: "1.0.0",
 });
 
-// Add a resource to fetch Selenium WebDriver session details
 server.resource(
   "webdriver-session",
   "session://details",
   async () => {
-    // Placeholder for session details logic
     return {
       contents: [
         {
@@ -52,7 +49,6 @@ server.resource(
   }
 );
 
-// Update the tool to execute actual Selenium WebDriver commands
 server.tool(
   "run-selenium-command",
   {
@@ -93,7 +89,7 @@ server.tool(
         };
       }
     } catch (error) {
-      const err = error as Error; // Explicitly cast error to Error type
+      const err = error as Error; 
       return {
         content: [
           {
@@ -109,7 +105,6 @@ server.tool(
 );
 
 
-// Start browser sessions with customizable options
 server.tool(
   "start-browser-session",
   {
@@ -133,7 +128,6 @@ server.tool(
   }
 );
 
-// Navigate to URLs
 server.tool(
   "navigate-to-url",
   {
@@ -153,7 +147,6 @@ server.tool(
   }
 );
 
-// Find elements using various locator strategies
 server.tool(
   "find-element",
   {
@@ -174,7 +167,6 @@ server.tool(
   }
 );
 
-// Click, type, and interact with elements
 server.tool(
   "interact-with-element",
   {
@@ -202,7 +194,6 @@ server.tool(
   }
 );
 
-// Perform mouse actions (hover, drag and drop)
 server.tool(
   "mouse-action",
   {
